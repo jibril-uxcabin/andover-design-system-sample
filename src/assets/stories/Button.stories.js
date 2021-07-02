@@ -17,6 +17,7 @@ Default.args = {
     id: '1',
     type: 'primary-lg',
     label: 'Primary Large',
+    disabled: true,
 }
 
 export const PrimarySmall = Template.bind({});

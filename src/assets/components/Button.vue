@@ -1,7 +1,6 @@
 <template>
-    <button :class="classes">
+    <button :class="classes" :id="disabled && 'disabled'" :disabled="disabled">
         {{ label }}
-        {{ test }}
     </button>
 </template>
 
@@ -52,8 +51,8 @@ button {
     font-weight: 700;
     line-height: 24px;
     font-style: normal;
-    font-family: Roboto;
     letter-spacing: 0.03em;
+    font-family: 'Roboto', sans-serif;
 }
 
 .primary-lg {
@@ -69,6 +68,7 @@ button {
 }
 
 .secondary-lg {
+    min-width: 200px;
     border-radius: 4px;
     border: 1px solid #044054;
 
@@ -93,5 +93,9 @@ button {
     text-decoration-line: underline;
 
     color: white;
+}
+
+#disabled {
+    cursor: not-allowed;
 }
 </style>
